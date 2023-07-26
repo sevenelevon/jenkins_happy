@@ -1,0 +1,32 @@
+ipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                // Шаги для сборки вашего сайта
+                // Например, установка зависимостей, сборка статики, компиляция кода и т.д.
+                // Ниже приведен простой пример:
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Шаги для размещения билда на хосте
+                // Ниже приведен простой пример, предполагая, что у вас есть SSH-доступ к хосту
+                // и директория для размещения проекта уже существует
+                sh 'scp -r ./build user@your-host:/path/to/project/elochka'
+            }
+        }
+
+        stage('Run') {
+            steps {
+                // Шаги для запуска вашего сайта на хосте
+                // Ниже приведен простой пример запуска веб-сервера (например, Nginx)
+                sh 'ssh user@your-host "cd /path/to/project/elochka && sudo nginx -p . -c nginx.conf"'
+            }
+        }
+    }
+}
