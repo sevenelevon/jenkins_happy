@@ -1,13 +1,11 @@
-ipeline {
+pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
-                sh 'ls -l'
-                sh 'hello world'
-                sh 'ip -a'
-                sh 'sudo apt-get update'
+                echo "building states"
+                sh 'node -v'
+                sh 'npm install'
             }
         }
     }
