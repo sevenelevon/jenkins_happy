@@ -4,8 +4,10 @@ ipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'node -v'
-                sh 'npm install'
+                sh 'ls -l'
+                sh 'hello world'
+                sh 'ip -a'
+                sh 'sudo apt-get update'
             }
         }
     }
