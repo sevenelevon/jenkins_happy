@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('install node js') {
             steps {
                 echo "install nvm and use node js"
                 sh 'export NVM_DIR="$HOME/.nvm"'
@@ -10,6 +10,9 @@ pipeline {
                 sh 'nvm use 18.17.0' // Активируйте нужную версию Node.js
                 // Далее можете продолжить со сборкой в
             }
+        }
+        
+        stage('Build') {
 
             steps {
                 echo "building states"
