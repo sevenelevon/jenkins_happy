@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         // Указываем путь к NVM_DIR для Jenkins
-        NVM_DIR = '/home/ubuntu/.nvm/'
+        NVM_DIR = '/home/ubuntu/'
         // Активируем нужную версию Node.js
         PATH = "$NVM_DIR/versions/node/v18.17.0/bin:$PATH"
     }
