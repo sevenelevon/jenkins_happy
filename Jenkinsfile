@@ -11,7 +11,7 @@ pipeline {
         stage('install node js') {
             steps {
                 echo "install nvm and use node js"
-                sh 'node -v'
+                sh 'node -v --user 0 --unsafe-perm true'
                 // sh 'export NVM_DIR="$HOME/.nvm"'
                 // sh 'source "$NVM_DIR/nvm.sh"'
                 // sh 'nvm install 18.17.0' // Установите нужную версию Node.js
