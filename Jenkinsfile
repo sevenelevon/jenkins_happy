@@ -24,7 +24,7 @@ pipeline {
                     //Активируем нужную версию node.js
                     def nodeBinPath = sh(
                         returnStdout: true,
-                        script: "source $NVM_DIR/nvm.sh && nvm use 18.17.0 && echo \$NVM_BIN"
+                        script: ". $NVM_DIR/nvm.sh && nvm use 18.17.0 && echo \$NVM_BIN"
                     ).trim()
                     withEnv(["PATH+NODE=${nodeBinPath}:$PATH"]) {
                         sh 'npm --version'
