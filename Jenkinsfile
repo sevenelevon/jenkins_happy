@@ -22,8 +22,7 @@ pipeline {
             steps {
                 echo "building states"
                 sh 'node -v'
-                sh "chmod -R 777 ${env.WORKSPACE}"
-                sh 'cd /home/ubuntu/project/elochka/frontend'
+                sh 'ls -a'
                 sh 'yarn start'
                 // Далее можете продолжить со сборкой в Build стадии
             }
