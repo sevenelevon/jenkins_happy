@@ -22,7 +22,8 @@ pipeline {
             steps {
                 echo "building states"
                 sh 'node -v'
-                sh 'npm install'
+                sh 'cd /home/ubuntu/project/elochka/frontend'
+                sh 'yarn start'
                 // Далее можете продолжить со сборкой в Build стадии
             }
         }
