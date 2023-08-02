@@ -21,6 +21,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "building states"
+                sh "chmod -R 777 ${env.WORKSPACE}"
                 sh 'node -v'
                 sh 'ls -a'
                 sh 'yarn start'
