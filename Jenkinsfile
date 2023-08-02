@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo "install nvm and use node js"
                 sh "chmod -R 777 ${env.WORKSPACE}"
-                sh 'sudo cd /home/ubuntu/project/elochka/frontend'
+                sh 'cd /home/ubuntu/project/elochka/frontend'
                 sh 'ls -a'
                 sh 'hostname'
             }
