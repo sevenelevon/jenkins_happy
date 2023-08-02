@@ -35,6 +35,7 @@ pipeline {
                 sh 'sudo chown -R $USER:$(id -gn $USER) /home/ubuntu/.nvm/versions/node/v18.17.0'
                 sh "npm install -g yarn"
                 sh 'cd /home/ubuntu/project/elochka/frontend'
+                sh 'pwd'
                 sh "yarn start"
                 // Далее можете продолжить со сборкой в Build стадии
             }
