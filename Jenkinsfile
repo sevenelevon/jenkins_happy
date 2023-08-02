@@ -32,7 +32,7 @@ pipeline {
                 }
                 echo "building states"
                 sh 'ls -a'
-                sh 'sudo chown -R $USER:$(id -gn $USER) /home/ubuntu/.nvm/versions/node/v18.17.0/lib/node_modules'
+                sh 'sudo chown -R $USER:$(id -gn $USER) /home/ubuntu/.nvm/versions/node/v18.17.0'
                 sh "npm install -g yarn"
                 sh "yarn start"
                 // Далее можете продолжить со сборкой в Build стадии
