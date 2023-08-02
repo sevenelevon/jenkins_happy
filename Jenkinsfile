@@ -11,22 +11,25 @@ pipeline {
         stage('install node js') {
             steps {
                 echo "install nvm and use node js"
-                sh 'node -v --user 0 --unsafe-perm true'
+                // sh 'node -v --user 0 --unsafe-perm true'
                 // sh 'export NVM_DIR="$HOME/.nvm"'
                 // sh 'source "$NVM_DIR/nvm.sh"'
                 // sh 'nvm install 18.17.0' // Установите нужную версию Node.js
-                sh 'nvm use 18.17.0' // Активируйте нужную версию Node.js
+                // sh 'nvm use 18.17.0' // Активируйте нужную версию Node.js
+                sh 'cd ./home/ubuntu'
+                sh 'ls -a'
+                sh 'hostname'
                 // Далее можете продолжить со сборкой в
             }
         }
 
-        stage('Build') {
+        // stage('Build') {
 
-            steps {
-                echo "building states"
-                sh 'node -v'
-                sh 'npm install'
-            }
-        }
+        //     steps {
+        //         echo "building states"
+        //         sh 'node -v'
+        //         sh 'npm install'
+        //     }
+        // }
     }
 }
