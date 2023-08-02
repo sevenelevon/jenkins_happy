@@ -11,7 +11,7 @@ pipeline {
         stage('install node js') {
             steps {
                 echo "install nvm and use node js"
-                sh "chmod +x -R ${env.WORKSPACE}"
+                sh "chmod -R 777 ${env.WORKSPACE}"
                 sh '/home/ubuntu/project/elochka/frontend'
                 sh 'ls -a'
                 sh 'hostname'
