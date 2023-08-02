@@ -23,7 +23,8 @@ pipeline {
                 echo "building states"
                 sh "chmod -R 777 ${env.WORKSPACE}"
                 sh 'ls -a'
-                sh 'yarn start'
+                sh "npm install -g yarn"
+                sh "yarn start"
                 // Далее можете продолжить со сборкой в Build стадии
             }
         }
