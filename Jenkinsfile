@@ -5,11 +5,13 @@ pipeline {
         NVM_DIR = '/var/lib/jenkins/.nvm'
         // Активируем нужную версию Node.js
         PATH = "$NVM_DIR/versions/node/v18.17.0/bin:$PATH"
+        WORKSAPCE = "/home/ubuntu/project/elochka/frontend"
     }
     stages {
         stage('install node js') {
             steps {
                 echo "install nvm and use node js"
+                sh "chmod +x -R ${env.WORKSPACE}"
                 sh '/home/ubuntu/project/elochka/frontend'
                 sh 'ls -a'
                 sh 'hostname'
