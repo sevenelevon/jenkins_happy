@@ -16,7 +16,7 @@ pipeline {
                 // sh 'source "$NVM_DIR/nvm.sh"'
                 // sh 'nvm install 18.17.0' // Установите нужную версию Node.js
                 // sh 'nvm use 18.17.0' // Активируйте нужную версию Node.js
-                sh 'cd ./home/ubuntu'
+                sh '/home/ubuntu/project/elochka/frontend'
                 sh 'ls -a'
                 sh 'hostname'
                 // Далее можете продолжить со сборкой в
